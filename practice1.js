@@ -13,7 +13,11 @@
 // 출력: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
 
 function countCharacters(s) {
-  // 이곳에 함수 작성을 해주세요.
+  // 결과를 담을 객체 result를 만든다.
+  // 배열로 바꾼 s를 forEach문을 사용해 반복한다.
+  // 문자열에 해당하는 key값이 없을 경우 새로 만들어주고 value로 1을 지정한다.
+  // 이미 문자열에 해당하는 key값이 있을 경우 value에 1을 더해준다.
+  // result를 return 한다.
   let result = {};
   [...s].forEach((item) => {
     if (!result[item]) result[item] = 1;
